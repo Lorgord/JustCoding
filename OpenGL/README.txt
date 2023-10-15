@@ -1,0 +1,1 @@
+Init CMake here to build project solution
