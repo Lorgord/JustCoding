@@ -3,3 +3,4 @@
 *.sln
 *.vcxproj*
 OpenGL/Build
+OpenGL/Libraries/*/doc*
