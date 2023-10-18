@@ -2,5 +2,5 @@
 **/x64
 *.sln
 *.vcxproj*
-OpenGL/Build
+*/Build
 OpenGL/Libraries/*/doc*
