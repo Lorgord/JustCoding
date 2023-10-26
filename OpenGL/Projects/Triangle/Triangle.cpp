@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <GL/glew.h>
 
+#include "Common/Shader/Shader.h"
 #include "GLFW/glfw3.h"
 
 
@@ -48,6 +49,8 @@ int main()
     glGenVertexArrays(1, &VertexArrayID);
     glBindVertexArray(VertexArrayID);
 
+    Shader shader{"Shader.vs", "Shader.fs"};
+
     static const GLfloat g_vertex_buffer_data[] = {
         -1.0f,  -1.0f,  0.0f,
          1.0f,  -1.0f,  0.0f,
@@ -62,6 +65,8 @@ int main()
     do
     {
         glClear(GL_COLOR_BUFFER_BIT);
+
+        shader.Use();
         
         glEnableVertexAttribArray(0);
         glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
